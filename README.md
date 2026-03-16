@@ -60,10 +60,11 @@ The design of Docs Assembler was driven by a fundamental need from teams like [H
     - Instructions on running repo locally with Jekyll coming soon.
 
 
-## Bugs, questions or feedback? - Email us
+## Contact us
+Email us with bugs or feedback. We don't collect analytics or track usage. We only know you're using Docs Assembler if you tell us.
 [team@netoftrees.com](mailto:team@netoftrees.com)
 
-
+Bugs, questions, feedback, or just to say hello? Email us. We don't use analytics or trackers—we only hear from you when you choose to reach out.
 
 ### After an extension update clear vscode history:  
 - Open the Command Palette: _Cmd+Shift+P_  
@@ -187,7 +188,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.8.81
+- 0.8.82
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
