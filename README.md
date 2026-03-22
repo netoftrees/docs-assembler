@@ -189,7 +189,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.8.110
+- 0.8.111
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -207,11 +207,13 @@ If the changes are as expected, click-move the published files to the **docs** f
     - Move, rename of map asset files updates references and map hyperlinks.
     - Shortcut keys 
     - json step (video step) - json intellisense, diagnostics, textMate and semantic tokens
+    - Reference remote guides
+
 
 
 ### Next
 - Video tutorial how to set up and publish to GitHub Pages
-- Reference remote guides
+
 
 
 ### Upcoming
