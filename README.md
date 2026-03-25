@@ -4,7 +4,7 @@ This is an experimental port from a c# server/database application - to a GitHub
 
 ### We think in webs, but we're forced to write in lines
 
-Human knowledge branches, loops, and layers—a living web of what-ifs and dependencies. Traditional documents force this into linear prose, losing the very structure that makes expertise usable.    
+Human knowledge branches, loops, and layers - a living web of what-ifs and dependencies. Traditional documents force this into linear prose, losing the very structure that makes expertise usable.    
 Docs Assembler bridges that gap. It is a way to give form to the networks in your mind - for others to understand and learn, or extend and refine.
 
  > **To truly understand how it works, we encourage you to explore the [Live Demo](https://docsassemblerdemo.netoftrees.com/).**  
@@ -189,7 +189,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.8.132
+- 0.8.134
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
