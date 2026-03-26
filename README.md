@@ -29,6 +29,7 @@ Docs Assembler is a VS Code extension that lets you build documentation systems 
 ### *and maintain a single source of truth.*
 
 
+
 ## Designed for Developers, by Developers
 
 The design of Docs Assembler was driven by a fundamental need from teams like [HAL Robotics](https://hal-robotics.com): to have a powerful system that *respects developer workflows and sovereignty*. This isn't just a platform; it's a philosophy built on core principles that will feel immediately right:
@@ -39,6 +40,7 @@ The design of Docs Assembler was driven by a fundamental need from teams like [H
 *   **Seamless Publishing:** It’s designed to publish directly to [GitHub Pages](https://docs.github.com/en/pages), a platform developers already understand. Even Liquid scripts embedded in your Markdown work as expected.
 *   **Built to Scale:** Like classes break down massive software systems, Docs Assembler's modules are designed to decompose enormous documentation sets into manageable, distributable units that different teams can own.
 *   **Engineering Rigour:** It brings true software tooling to docs, with IntelliSense for variables, full validation before publish, and automatic handling of relative URLs that are defined as variables. This ensures any local files referenced by these URL variables are automatically discovered and copied to the publish folder, preventing broken links and ensuring robustness.
+
 
 
 ## Live Demo
@@ -60,11 +62,12 @@ The design of Docs Assembler was driven by a fundamental need from teams like [H
     - Instructions on running repo locally with Jekyll coming soon.
 
 
+
 ## Contact us
 Email us with bugs or feedback. We don't collect analytics or track usage. We only know you're using Docs Assembler if you tell us.
 [team@netoftrees.com](mailto:team@netoftrees.com)
 
-Bugs, questions, feedback, or just to say hello? Email us. We don't use analytics or trackers—we only hear from you when you choose to reach out.
+
 
 ### After an extension update clear vscode history:  
 - Open the Command Palette: _Cmd+Shift+P_  
@@ -189,7 +192,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.8.134
+- 0.8.136
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
