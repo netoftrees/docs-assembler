@@ -192,7 +192,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.8.151
+- 0.8.152
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -210,17 +210,18 @@ If the changes are as expected, click-move the published files to the **docs** f
     - Move, rename of map asset files updates references and map hyperlinks.
     - Shortcut keys 
     - json step (video step) - json intellisense, diagnostics, textMate and semantic tokens
-    - Reference remote guides
+    - Reference guides in remote banks
 
 
 
 ### Next
-- Video tutorial how to set up and publish to GitHub Pages
+- Video tutorials
+    - Intro video
+- Help files
 
 
 
 ### Upcoming
-- Tutorials and help files
 - Move or copy a section of a branch
 - Make section of branch a new map
 - GitLab Pages integration
@@ -230,7 +231,6 @@ If the changes are as expected, click-move the published files to the **docs** f
     - shape
     - spread
 - Light theme
-- Docker database + SPA viewer
 
 
 
