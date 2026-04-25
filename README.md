@@ -192,7 +192,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.8.216
+- 0.8.217
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
