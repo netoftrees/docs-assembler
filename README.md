@@ -192,7 +192,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.8.221
+- 0.8.222
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -211,6 +211,7 @@ If the changes are as expected, click-move the published files to the **docs** f
     - Shortcut keys 
     - json step (video step) - json intellisense, diagnostics, textMate and semantic tokens
     - Reference guides in remote banks
+    - Helicopter view
 
 
 
@@ -226,10 +227,9 @@ If the changes are as expected, click-move the published files to the **docs** f
 - Make section of branch a new map
 - GitLab Pages integration
 - Port from database version
-    - projects
-    - search
-    - shape
-    - spread
+    - Projects
+    - Search
+    - Impact
 - Light theme
 
 
