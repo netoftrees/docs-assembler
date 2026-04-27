@@ -9,7 +9,7 @@ Docs Assembler bridges that gap. It is a way to give form to the networks in you
 
  > **To truly understand how it works, we encourage you to explore the [Live Demo](https://docsassemblerdemo.netoftrees.com/).**  
  >It was built with this version of the extension, which we've released for hands-on experimentation.  
- >*Please note: This is an early release with known limitations. We advise caution for critical work until the production-ready version is released later this year.*
+ >***Please note: This extension an early release with known limitations. We advise caution for critical work until the production-ready version is released later this year.***
 
 ### *Solve documentation hell,*
 
@@ -192,7 +192,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.8.222
+- 0.8.223
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
