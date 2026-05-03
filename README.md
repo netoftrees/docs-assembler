@@ -192,7 +192,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.8.247
+- 0.9.0
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -212,6 +212,7 @@ If the changes are as expected, click-move the published files to the **docs** f
     - json step (video step) - json intellisense, diagnostics, textMate and semantic tokens
     - Reference guides in remote banks
     - Helicopter view
+    - Repo initialisation, resources update and migration
 
 
 
