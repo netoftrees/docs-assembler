@@ -11,7 +11,7 @@ This is an experimental port from a c# server/database application - to a GitHub
 Human knowledge branches, loops, and layers - a living web of what-ifs and dependencies. Traditional documents force this into linear prose, losing the very structure that makes expertise usable.    
 Docs Assembler bridges that gap. It is a way to give form to the networks in your mind - for others to follow and learn from your thinking, or extend and refine it with their own.
 
- > **To truly understand how it works, we encourage you to explore the [Live Demo](https://docsassemblerdemo.netoftrees.com/).**  
+ > **To truly understand how it works, we encourage you to explore the [Live Demo](https://netoftrees.com/docs-assembler-demo/).**  
  >It was built with this version of the extension, which we've released for hands-on experimentation.  
  >***Please note: This extension is an early release with known limitations. We advise caution for critical work until the production-ready version is released later this year.***
 
@@ -49,17 +49,14 @@ The design of Docs Assembler was driven by a fundamental need from teams like [H
 
 ## Live Demo
 
-- **Live Demo GitHub Pages Site**: [See it in action](https://docsassemblerdemo.netoftrees.com/)  
+- **Live Demo GitHub Pages Site**: [See it in action](https://netoftrees.com/docs-assembler-demo/)  
     - Publish currently targets GitHub Pages, producing Jekyll Markdown.  
     - After a Publish run a Git Commit and Push for GitHub Pages to make changes live. 
 
-- **GitHub Pages Repository**: [Explore the repo](https://github.com/CompositeFlows/DocsAssemblerDemo/)  
+- **GitHub Pages Repository**: [Explore the repo](https://github.com/netoftrees/docs-assembler-demo/)  
     - The sample maps are located in the `/tsmaps/` folder and published guides in `/docs/`.  
 
-- **Frontend Renderer**: [TypeScript Source Code](https://github.com/CompositeFlows/fragment-renderer)  
-    - Client-side application that renders the published content in the live demo.
-
-- **Sandbox Repository**: [Sandbox repo](https://github.com/CompositeFlows/DocsAssemblerDemoSandbox/)
+- **Template Repository**: [Template repo](https://github.com/netoftrees/docs-assembler-template/)
     - All-in-one repository with docs, FragmentRenderer, and Jekyll setup
     - Supports full local workflow: assemble docs → publish → Jekyll build → local preview
     - Everything needed to develop, test, and preview documentation changes locally
@@ -195,7 +192,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.9.12
+- 0.9.13
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -284,7 +281,7 @@ website:
 人类知识会分支、循环、分层——一张由假设与依赖构成的活网。传统文档却强行塞进线性文字，丢掉了让知识真正可用的结构。  
 Docs Assembler 填补了这个缺口。它让你头脑中的网络具象化——让他人能够沿着你的思路学习，或用他们自己的思考去扩展、完善你的思路。
 
-> **想真正理解它如何运作，建议先探索[在线演示](https://docsassemblerdemo.netoftrees.com/)。**
+> **想真正理解它如何运作，建议先探索[在线演示](https://netoftrees.com/docs-assembler-demo/)。**
 > 该演示即由此版本扩展构建，现已开放体验。
 > ***注意：本扩展为早期版本，存在已知限制。正式版将于今年晚些时候发布，在此之前请勿用于关键工作。***
 
@@ -318,14 +315,12 @@ Docs Assembler 的设计源于 [HAL Robotics](https://hal-robotics.com) 等团�
 
 ## 在线演示
 
-- **GitHub Pages 演示站点**：[查看实际效果](https://docsassemblerdemo.netoftrees.com/)
+- **GitHub Pages 演示站点**：[查看实际效果](https://netoftrees.com/docs-assembler-demo/)
     - 目前发布目标为 GitHub Pages，生成 Jekyll Markdown。
     - 发布后需执行 Git Commit 和 Push，GitHub Pages 才会生效。
-- **GitHub Pages 仓库**：[探索仓库](https://github.com/CompositeFlows/DocsAssemblerDemo/)
-    - 示例映射位于 `/tsmaps/` 文件夹，发布的指南在 `/docs/`。
-- **前端渲染器**：[TypeScript 源码](https://github.com/CompositeFlows/fragment-renderer)
-    - 客户端应用，用于在在线演示中渲染已发布内容。
-- **沙盒仓库**：[沙盒仓库](https://github.com/CompositeFlows/DocsAssemblerDemoSandbox/)
+- **GitHub Pages 仓库**：[探索仓库](https://github.com/netoftrees/docs-assembler-demo/)
+    - 示例映射位于 `/tsmaps/` 文件夹，发布的指南在 `/docs/`. 
+- **模板仓库**：[模板仓库](https://github.com/netoftrees/docs-assembler-template/)
     - 包含文档、FragmentRenderer 和 Jekyll 配置的一体化仓库。
     - 支持完整本地工作流：组装文档 → 发布 → Jekyll 构建 → 本地预览。
     - 开发、测试和预览文档变更所需的一切。
@@ -430,7 +425,7 @@ Docs Assembler 的设计源于 [HAL Robotics](https://hal-robotics.com) 等团�
 ![netoftrees C# server/database applications gif](./assets/netoftreesCsharpMaps.gif)
 
 ### 已发布版本
-- 0.9.12
+- 0.9.13
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射
