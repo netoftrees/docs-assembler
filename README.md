@@ -11,9 +11,13 @@ This is an experimental port from a c# server/database application - to a GitHub
 Human knowledge branches, loops, and layers - a living web of what-ifs and dependencies. Traditional documents force this into linear prose, losing the very structure that makes expertise usable.    
 Docs Assembler bridges that gap. It is a way to give form to the networks in your mind - for others to follow and learn from your thinking, or extend and refine it with their own.
 
+
+> **Issues & Feedback:** [GitHub](https://github.com/netoftrees/docs-assembler/issues) | 
+
+
  > **To truly understand how it works, we encourage you to explore the [Live Demo](https://netoftrees.com/docs-assembler-demo/).**  
  >It was built with this version of the extension, which we've released for hands-on experimentation.  
- >***Please note: This extension is an early release with known limitations. We advise caution for critical work until the production-ready version is released later this year.***
+ >***Please note: Docs Assembler is stable for daily use. We recommend testing thoroughly before deploying mission-critical documentation.***
 
 ### *Solve documentation hell,*
 
@@ -192,7 +196,7 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 ### Released
-- 0.9.13
+- 0.9.16
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -235,16 +239,6 @@ If the changes are as expected, click-move the published files to the **docs** f
 
 
 
-### Notes
-
-- ***Encapsulation*** - Wrapping a segment of the documentation within a single **map**.
-- ***Inheritance*** - Deriving a new **map** from an existing **map** (parent).
-- ***Polymorphism*** - Grouping **maps** as members of a common superclass (e.g., tiger, lion => cats).
-- ***Abstraction*** - Hiding complex documentation details within a **map** and exposing that **map's interface** to other **maps** as a single **step**.
-- ***Composition*** - Composing a **map** of one or more other **maps**.
-
-
-
 ### Links
 
 [team@netoftrees.com](mailto:team@netoftrees.com)  
@@ -280,6 +274,8 @@ website:
 
 人类知识会分支、循环、分层——一张由假设与依赖构成的活网。传统文档却强行塞进线性文字，丢掉了让知识真正可用的结构。  
 Docs Assembler 填补了这个缺口。它让你头脑中的网络具象化——让他人能够沿着你的思路学习，或用他们自己的思考去扩展、完善你的思路。
+
+> **问题与反馈：**[在 Gitee 上提交中文反馈](https://gitee.com/netoftrees/docs-assembler/issues)
 
 > **想真正理解它如何运作，建议先探索[在线演示](https://netoftrees.com/docs-assembler-demo/)。**
 > 该演示即由此版本扩展构建，现已开放体验。
@@ -425,7 +421,7 @@ Docs Assembler 的设计源于 [HAL Robotics](https://hal-robotics.com) 等团�
 ![netoftrees C# server/database applications gif](./assets/netoftreesCsharpMaps.gif)
 
 ### 已发布版本
-- 0.9.13
+- 0.9.16
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射
@@ -462,13 +458,6 @@ Docs Assembler 的设计源于 [HAL Robotics](https://hal-robotics.com) 等团�
     - 影响分析
 - 浅色主题
 
-### 备注
-
-- ***封装*** —— 将文档段落包装在单个**映射**中。
-- ***继承*** —— 从现有**映射**（父级）派生新**映射**。
-- ***多态*** —— 将不同**映射**归为同一超类成员（例如：虎、狮 => 猫科）。
-- ***抽象*** —— 将复杂文档细节隐藏在**映射**内部，仅向其他**映射**暴露该**映射的接口**（作为单个**步骤**）。
-- ***组合*** —— 用一个或多个其他**映射**构成**映射**。
 
 ### 链接
 
