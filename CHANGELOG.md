@@ -22,6 +22,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Light theme
 
 
+
+## [0.9.18] - 2026-05-14
+
+### Added
+- **Display Tool Contract & Localization** - added comprehensive README guidance on translation and multi-language support for display-tool and renderer authors.
+
+### Changed
+- **Stability Messaging** - updated the control-view notice from early-release caution to: "Docs Assembler is stable for daily use. We recommend testing thoroughly before deploying mission-critical documentation."
+
+### Fixed
+- **Repository Link** - replaced broken Gitee link with the correct GitHub URL in README.md.
+
+
+
 ## [0.9.16] - 2026-05-13
 
 ### Added
