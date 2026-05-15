@@ -7,18 +7,18 @@ Note: Docs Assembler is stable for daily use. We recommend testing thoroughly be
 
 
 
-### Solve documentation hell:
+### *Solve documentation hell...*
 
 - **Sprawling, duplicated content** across guides, manuals, and wikis.
 - **Bug-prone updates** - edit one place, miss it in ten others.
 - **Brittle, unmanageable docs** that can't handle complex, branching scenarios.
 
-### …by applying software engineering principles to text.
+### *...by applying software engineering principles to text...*
 
 
 Human knowledge branches, and layers - a living web of what-ifs and dependencies. Traditional documents force this into linear prose, losing the very structure that makes expertise usable. 
 
-Docs Assembler is a way to give form to the networks in your mind that others can follow, learn from, extend or refine. It is a VS Code extension. It lets you build documentation systems with **modular, reusable components**. Think of it like **classes for your content**. 
+Docs Assembler bridges the gap, it is a way to give form to the networks in your mind that others can follow, learn from, extend, or refine. It is a VS Code extension. It lets you build documentation systems with **modular, reusable components**. Think of it like **classes for your content**: 
 
 - **Maps (.tsmap files)**: Self-contained documentation modules that can be nested and composed, just like classes. They encapsulate text, decision trees, or both.
 - **Variables**: Define reusable text snippets. Change one, update everywhere.
@@ -27,7 +27,10 @@ Docs Assembler is a way to give form to the networks in your mind that others ca
 
 
 
-### *and maintain a single source of truth.*
+### *...and maintain a single source of truth*
+
+
+ > **To truly understand how it works, we encourage you to explore the [Live Demo](https://netoftrees.com/docs-assembler-demo/).**  
 
 
 ## Designed for Developers, by Developers
@@ -41,10 +44,6 @@ The design of Docs Assembler was driven by a fundamental need from teams like [H
 *   **Built to Scale:** Like classes break down massive software systems, Docs Assembler's modules are designed to decompose enormous documentation sets into manageable, distributable units that different teams can own.
 *   **Engineering Rigour:** It brings true software tooling to docs, with IntelliSense for variables, full validation before publish, and automatic handling of relative URLs that are defined as variables. This ensures any local files referenced by these URL variables are automatically discovered and copied to the publish folder, preventing broken links and ensuring robustness.
 *   **Internationalisation by Design:** The guide/fragment model suits analytic languages (English, Chinese) where word forms stay constant. In high-inflection languages (Russian, Arabic), the same sub-guide might need different gender, case, or number depending on where it is called. Display tools intentionally assemble the full path before rendering or translating, so authors write plain Markdown, and grammar adapts at the edge.
-
-
-
- > **To truly understand how it works, we encourage you to explore the [Live Demo](https://netoftrees.com/docs-assembler-demo/).**  
 
 
 
@@ -226,7 +225,7 @@ We actively welcome contributions toward reference display tool implementations 
 
 
 ### Released
-- 0.9.20
+- 0.9.22
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -474,7 +473,7 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 我们积极欢迎对参考显示工具实现的贡献——以展示此模式。请在开始前提交 issue，以便就边界定义达成一致。
 
 ### 已发布版本
-- 0.9.20
+- 0.9.22
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射
