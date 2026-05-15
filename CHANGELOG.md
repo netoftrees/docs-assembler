@@ -5,6 +5,7 @@ All notable changes to the Docs Assembler extension are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
 ## [Unreleased]
 
 ### Added
@@ -20,6 +21,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Search
   - Impact
 - Light theme
+
+
+
+
+## [0.9.20] - 2026-05-15
+
+### Changed
+- **README Reorganisation** - restructured sections for improved readability.
+- **README Section Rewrite** - rewrote one section for clarity.
+
+### Fixed
+- **README Layout Inconsistencies** - corrected formatting, heading levels, and spacing irregularities throughout the README.
 
 
 
