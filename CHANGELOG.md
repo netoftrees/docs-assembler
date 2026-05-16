@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **README Reorganisation** - minor restructuring of some sections for improved readability.
 
 ### Fixed
-- **Compiler View Icons** — fixed missing file-type icons in the compiler view caused by a font file not loading.
+- **Compiler View Icons**  -  fixed missing file-type icons in the compiler view caused by a font file not loading.
 
 
 

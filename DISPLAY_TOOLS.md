@@ -1,66 +1,110 @@
 # Display Tool Contract
 
-> **Document Status:** This contract describes the intended architecture and boundaries for Docs Assembler display tools. Some sections—particularly those marked 🚧 below—represent the planned roadmap and design direction rather than currently implemented features. They are included so that authors and contributors can build toward a consistent future state.
+> **Document Status:** This contract describes the intended architecture and boundaries for Docs Assembler display tools. It has been revised to incorporate full‑path context translation, predictive pre‑fetching, and explicit safety guidelines. Sections marked 🚧 represent planned future enhancements.
+>
+> **Related Document:** For an in‑depth explanation of the technical rationale and implementation examples, see the [Predictive Pre‑fetching White Paper](./PREDICTIVE_PREFETCH_WHITEPAPER.md).
 
-Docs Assembler intentionally keeps the authoring layer simple. Complexity that does not belong in a text editor - rendering, security, localization, search indexing, state management, and liability enforcement - is pushed to the display tool.
+Docs Assembler intentionally keeps the authoring layer simple. Complexity that does not belong in a text editor  -  rendering, security, localization, search indexing, state management, and liability enforcement  -  is pushed to the display tool.
 
 This document describes the boundaries and known challenges so display tool authors can build correctly.
 
-## Localization & Multi-Language Display
+---
 
-Docs Assembler's authoring model is naturally suited to **analytic and low-inflection languages** (English, Chinese, etc.), where grammar does not create cross-fragment agreement chains. **Synthetic and high-inflection languages** (Russian, Arabic, Polish, German, Basque, etc.) require display-layer assembly because the same reusable sub-guide may need different gender, case, number, or tense depending on the parent path that calls it.
+## Terminology
 
-This applies in two scenarios:
-- **Native authoring:** A Russian author writes guides in Russian that reuse sub-guides across different parent contexts.
-- **Translation:** An English source guide is translated into Russian, Arabic, Polish, or French, where the target language requires grammatical features (case, gender, number, aspect) that English does not encode.
+- **Guide**  -  a tree of fragments (nodes). Each guide has a root fragment.
+- **Fragment**  -  a single piece of content (Markdown or HTML). Fragments may have child fragments (branching).
+- **Path**  -  the sequence of fragments from the root to the current fragment.
 
-### The Assembly-First Pattern
+---
 
-Variables exist in maps and variable files. During publish, all variables, relative paths, and imports are resolved. Steps with no branching are merged until a branch occurs. The result is a simple JSON tree of Markdown fragments.
+## Localization & Multi‑Language Display
 
-A static site generator (e.g., Jekyll) converts these Markdown fragments to HTML fragments. It is those HTML fragments that are passed over the wire to the reader's machine, where the display tool assembles them into the final view.
+Docs Assembler supports translation into any language. For **synthetic languages** (Russian, Arabic, Polish, German, etc.), grammatical features such as gender, case, number, tense, and aspect depend on the full narrative context. The display tool must ensure that translated fragments read naturally when assembled from a path.
 
-For high-inflection languages, display tools should assemble the full path from root to current step *before* rendering or translating. This gives the rendering engine (or AI translator) full anaphoric context and allows sub-guide reuse without requiring authors to embed grammar logic in their Markdown.
+### Recommended Approach: Full‑Path Context Translation
 
-### Grammatical State Propagation
+**Principle:** When translating a fragment, provide the entire narrative context in the **target language** (the text already shown to the user) plus the original source text if needed. Use a high‑quality LLM (e.g., DeepSeek) to translate only the new fragment, relying on the model’s natural language understanding to handle all grammatical agreement.
 
-For high-inflection languages, the display tool must carry a small **grammatical state object** as it walks the tree. This state is typically 0.5–2 KB for technical documentation and rarely exceeds 5 KB even for complex narratives.
+This method applies equally to **translating from English** and to **natively authoring in a synthetic language**  -  any fragment can be adapted to its parent path’s grammatical context by providing the full path as context. For example, a sub‑guide written in Russian for a “patient preparation” step will automatically change its case, tense, and gender when reused in a maternity ward guide versus a prostate cancer ward guide, because the full path context (the Russian text already displayed) gives the AI the required grammatical state.
 
-The state object should include:
+**Advantages:**
+- Works for any content (technical, creative, conversational).
+- No manual extraction of gender, number, tense, or aspect.
+- No language‑specific heuristics or lexicons required.
+- Preserves idioms, style, and narrative flow.
+- Maintains grammatical consistency with already‑displayed text.
 
-```json
-{
-  "path": ["root","onboarding","step_3","sub_security","step_1"],
-  "bindings": {
-    "user": {"name":"Alice","gender":"feminine","number":"singular"},
-    "role": {"name":"Administrator","gender":"feminine","number":"singular"},
-    "device": {"name":"Monitor","gender":"masculine","animacy":"inanimate"}
-  },
-  "discourse": {
-    "topic": "user",
-    "formality": "formal",
-    "mood": "imperative"
-  },
-  "glossary_hash": "a1b2c3d4"
-}
+**Prompt template for translation (English → Russian):**
+
+```
+System: You are a professional translator. Translate the following English text to Russian.
+Preserve style, tone, idioms, and all grammatical relationships.
+The Russian text already shown to the user is provided as context so you can match its gender, case, tense, and aspect.
+
+Previous context (Russian, already displayed):
+[Full Russian translation of root → parent fragments]
+
+New text to translate (English):
+[Current fragment English]
+
+Output ONLY the Russian translation of the new text.
 ```
 
-**Key principles:**
-- **Track only active referents.** The display tool should maintain the discourse stack deterministically - dropping referents that have not appeared in recent fragments. This is best implemented as deterministic code (e.g., an LRU cache of the last N mentioned entities), not delegated to an AI prompt. While you could architect a prompt that asks the AI to return updated state alongside adapted text, this introduces non-determinism: the AI may hallucinate, drop, or misgender referents. The state object should be owned by the display tool; the AI should consume it, not produce it.
-- **Post state with each request.** If the display tool is a stateless web app, this object should be cached in `sessionStorage` and posted back to the server when retrieving the next fragment.
-- **Compress over the wire.** JSON with repeated keys compresses to roughly 30 % of raw size; even complex narrative states stay well under typical HTTP header budgets.
+**For native rewriting (synthetic source → same language, different context):**
 
-### The Glossary Pattern
+```
+System: You are a professional technical writer. The following narrative is in [language]. Rewrite the last fragment so that it fits the grammatical context (gender, case, number, tense, aspect) of the previous narrative. Do not change the meaning or style.
 
-Display tools should accept a product glossary (e.g., `glossary.yaml`) that maps source terms to approved translations per locale. This is passed to the translation API to eliminate domain-specific ambiguity.
+Previous context ([language]):
+[Full source text of root → parent fragments]
+
+New fragment to adapt ([language]):
+[Current fragment source text]
+
+Output ONLY the adapted version of the new fragment.
+```
+
+### Optional Advanced Technique: Deterministic State Extraction (Not Recommended for General Use)
+
+For very high‑volume, repetitive technical documentation, a display tool *may* implement manual grammatical state tracking (as described in earlier contract versions). However, this approach fails for creative content, requires significant language‑specific code, and is error‑prone. Authors are strongly encouraged to use the full‑path context method instead.
+
+---
+
+## Predictive Pre‑fetching (Required Optimisation)
+
+To achieve real‑time perception, display tools **must** implement predictive pre‑fetching:
+
+- After serving the current fragment (translated), identify all child fragments.
+- For each child, construct the hypothetical full target‑language path (current target‑language context + child’s source text or child’s source text to be translated).
+- Send parallel adaptation requests to the LLM API (with the prompt template above).
+- Cache the results (server‑side, CDN, or browser) keyed by `hash(full_source_path):target_lang` (for translation) or `hash(full_source_path):same_lang` (for rewriting).
+- When the user clicks a child, serve the pre‑fetched adaptation from cache (<10 ms).
+
+If the user clicks before pre‑fetching completes (rare, given reading time), fall back to an on‑the‑fly API call with a small loading indicator.
+
+**Caching notes:**
+- Bust cache when the source text changes or the glossary updates.
+- Use `stale-while-revalidate` for mobile networks.
+- For offline reading, pre‑fetch entire subtrees when network is available.
+
+---
+
+## Grammatical State Propagation (Deprecated for General Use)
+
+Earlier versions of this contract described a manual grammatical state object. That approach is **no longer recommended** for most display tools because it cannot handle general English content reliably. It remains documented here for legacy implementations but will be moved to an appendix in future versions.
+
+For new display tools, use full‑path context translation as described above.
+
+---
+
+## The Glossary Pattern (Still Required)
+
+Even with full‑path context translation, a glossary is essential to eliminate domain‑specific ambiguity. The display tool must accept a `glossary.yaml` that maps source terms to approved translations per locale. The glossary is passed to the translation API (e.g., in the system prompt or as a separate parameter).
 
 **Example `glossary.yaml`:**
 
 ```yaml
-# glossary.yaml
-# Product-specific terminology for Docs Assembler guides
-# Each term maps to approved translations per locale
-
 terms:
   - id: abort
     context: "Force quit or emergency stop of a process"
@@ -78,79 +122,86 @@ terms:
       pl: "uruchomić"
       ar: "تشغيل"
 
-  - id: review
-    context: "One-time verification step"
-    translations:
-      ru: "проверить"
-      fr: "vérifier"
-      pl: "sprawdzić"
-      ar: "التحقق"
-
-  - id: review_ongoing
-    context: "Ongoing monitoring or repeated checking"
-    translations:
-      ru: "проверять"
-      fr: "surveiller"
-      pl: "monitorować"
-      ar: "مراقبة"
-
-  - id: user
-    context: "Generic UI reference to a person"
-    translations:
-      ru: "пользователь"
-      fr: "utilisateur"
-      pl: "użytkownik"
-      ar: "المستخدم"
-
-  - id: user_account
-    context: "The account entity, not the person"
-    translations:
-      ru: "учётная запись"
-      fr: "compte"
-      pl: "konto"
-      ar: "الحساب"
-
-  - id: settings
-    context: "Application configuration"
-    translations:
-      ru: "настройки"
-      fr: "paramètres"
-      pl: "ustawienia"
-      ar: "الإعدادات"
-
 style_brief:
-  ru: "Use formal imperative verbs ending in -те. Prefer perfective aspect for single actions. Use 'вы' (formal you) throughout."
-  fr: "Use formal 'vous' for instructions. Prefer infinitive form for UI labels."
-  pl: "Use formal 'Państwo' or second-person plural for instructions."
-  ar: "Use formal Modern Standard Arabic. Avoid colloquial forms."
+  ru: "Use formal imperative verbs ending in -те. Prefer perfective aspect for single actions."
+  fr: "Use formal 'vous' for instructions."
 ```
 
-### Caching
+The style brief provides additional guidance (formality, aspect preference, etc.).
 
-Cache translations by a hash of the **template text** (unresolved Markdown), not the resolved string. Bust the cache only when the template or glossary changes.
+---
 
-### Authoring Guidelines (Optional but Recommended)
+## Human Override 🚧
 
-Authors can minimize residual risk by favoring **imperative voice** directed at the reader (*"Click the Save button"*) over third-person narration that refers to variables from parent maps. Imperatives avoid the cross-fragment agreement chains that make reuse difficult in high-inflection languages.
+If a locale‑specific `.tsfrg` file exists (e.g., `ru/onboarding.tsfrg`), the display tool must use it directly and skip AI translation for that fragment. This allows teams to lock critical translations after human verification.
 
-### Human Override 🚧
+For safety‑critical guides (see below), **all fragments must be human‑verified**  -  either via `.tsfrg` or through a separate approval workflow. AI‑only translation is never acceptable for instructions where a mistake could cause harm or loss.
 
-> **Planned:** This mechanism is not yet implemented. It is included in the contract to guide future display-tool development.
+---
 
-If a locale-specific `.tsfrg` file exists (e.g., `ru/onboarding.tsfrg`), the display tool should use it directly and skip AI translation for that fragment. This lets teams refine critical paths without rebuilding the authoring model.
+## Hallucination Risks and Safety
+
+AI translation models (including DeepSeek, GPT‑4, etc.) can produce **hallucinations**: omissions, additions, distortions, or grammatical errors. The rate depends on content type:
+
+| Content type | Estimated error rate |
+|--------------|--------------------|
+| Technical documentation (short, imperative) | 2 - 4% |
+| User guides with variable referents | 5 - 8% |
+| Narratives, scripts | 10 - 15% |
+
+For **non‑critical** documentation (user manuals, help guides, marketing), these rates are acceptable when combined with human review of the most important fragments.
+
+### ⚠️ CRITICAL SAFETY DISCLAIMER
+
+> **For safety‑critical instructions (satellite launch procedures, medical device operation, nuclear facility control, aviation checklists, etc.):**
+>
+> - **Do not use AI‑only translation**  -  no LLM is reliable enough for autonomous use in such contexts. A single hallucination could be catastrophic.
+> - **Acceptable workflow:** Use the display tool as a **productivity aid for human expert translators**. The AI produces a first draft; a qualified human (native speaker of the target language + domain expert) must verify and approve every instruction before use.
+> - **For extremely high‑stakes scenarios,** use formal verification (translation memory with 100% exact match from pre‑approved, human‑validated phrases) instead of generative AI.
+
+Display tool authors **must** include this disclaimer in their user documentation if the tool is intended for any application where translation errors could lead to physical, financial, or reputational harm.
+
+---
+
+## Caching (General)
+
+Cache translations by a hash of the **full source path** (not just the fragment text). Bust the cache only when the source fragment, glossary, or style brief changes.
+
+For shared hosting, use a distributed cache (Redis, Memcached). For a single‑user display tool, in‑memory caching is sufficient.
+
+---
+
+## Authoring Guidelines (Optional but Recommended)
+
+To reduce the risk of ambiguity and hallucinations, authors are encouraged to:
+
+- Keep fragments short (≤100 words).
+- Use **imperative voice** for instructions (“Click the Save button”).
+- Introduce characters with clear pronouns early (“Alice opens the door. She sees…”).
+- Avoid long‑distance dependencies across many fragments (prefer to repeat the subject occasionally).
+
+These guidelines improve translation quality for any LLM.
 
 ---
 
 ## Known Challenges for Display Tool Authors
 
 ### State & Navigation
-- **State on refresh:** Path state must be URL-serializable. For deep paths exceeding URL limits, use a GUID-backed share link with server-side storage; fall back to `sessionStorage` for offline tools.
-- **Query string limits:** ~2K characters is the safe cross-browser limit. Hybrid strategy: query string for short paths, `sessionStorage` for long paths, GUID-backed links for sharing.
+
+- **Path state on refresh:** The full source path must be URL‑serializable (e.g., `?path=root,step1,step2`). For deep paths exceeding URL limits (2KB), use a GUID‑backed share link with server‑side storage.
+- **Pre‑fetching on slow networks:** Use `stale-while-revalidate` and limit the number of parallel pre‑fetch requests (e.g., max 5).
 
 ### Rendering & Content
-- **Markdown flavor parity:** Authors may use GFM; display tools should handle tables, task lists, and fenced code blocks consistently.
 
+- **Markdown flavour parity:** Authors may use GFM; display tools should handle tables, task lists, and fenced code blocks consistently.
+- **HTML fragments:** If fragments contain HTML, the translation API must preserve tag structure. Use the glossary to protect tag content from translation.
+
+---
 
 ## Contributing Display Tools
 
-We welcome contributions toward reference display tool implementations (web viewer, CLI renderer, static exporter) that demonstrate the assembly-first and glossary patterns. Please open an issue to discuss the contract before submitting a new implementation.
+We welcome contributions toward reference display tool implementations (web viewer, CLI renderer, static exporter) that demonstrate the **full‑path context translation + predictive pre‑fetching** pattern. Please open an issue to discuss the contract before submitting a new implementation.
+
+---
+
+*This contract is maintained by the Docs Assembler project. Last revised: 2026.*
