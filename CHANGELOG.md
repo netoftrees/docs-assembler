@@ -25,13 +25,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.24] - 2026-05-17
+
+### Fixed
+- **Duplicated menu item** - `New step file` appeared twice in the Explorer context menu .
+
+
+
 ## [0.9.22] - 2026-05-16
 
 ### Changed
 - **README Reorganisation** - minor restructuring of some sections for improved readability.
 
 ### Fixed
-- **Compiler View Icons**  -  fixed missing file-type icons in the compiler view caused by a font file not loading.
+- **Compiler View Icons** - fixed missing file-type icons in the compiler view caused by a font file not loading.
 
 
 

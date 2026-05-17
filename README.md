@@ -225,7 +225,7 @@ We actively welcome contributions toward reference display tool implementations 
 
 
 ### Released
-- 0.9.22
+- 0.9.24
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -473,7 +473,7 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 我们积极欢迎对参考显示工具实现的贡献——以展示此模式。请在开始前提交 issue，以便就边界定义达成一致。
 
 ### 已发布版本
-- 0.9.22
+- 0.9.24
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射
