@@ -25,6 +25,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.26] - 2026-05-19
+
+### Added
+- **Remote Guide Loading** - added proxy pattern documentation to the Display Tool Contract for cross-origin fragments and asset proxying.
+- **Cross-Origin Note** - updated README.md (English and Chinese) to clarify remote map references across repos and domains.
+
+### Security
+- **Proxy Guidelines** - documented allowlist validation, path validation, rate limiting, and Content-Type preservation for proxy implementations.
+
+
+
 ## [0.9.24] - 2026-05-17
 
 ### Fixed

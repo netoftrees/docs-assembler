@@ -198,6 +198,47 @@ These guidelines improve translation quality for any LLM.
 
 ---
 
+## Remote Guide Loading & Same-Origin Policy
+
+Docs Assembler guides may reference fragments hosted on different origins — for example, a guide on `docs.example.com` may embed a sub-guide from `support.partner.org`. Browsers enforce the Same-Origin Policy and CORS; servers do not. Display tools therefore **must** route cross-origin fragment requests through a server-side proxy or edge function.
+
+### Recommended proxy pattern
+
+1. The display tool running on `site-a.com` needs a fragment from `site-b.com`.
+2. It requests the fragment via its own proxy endpoint:
+   `GET https://site-a.com/api/fragment-proxy?url=https://site-b.com/guides/fragment.md`
+3. The proxy validates the target URL against an allowlist of trusted guide banks, fetches the raw fragment server-side, and returns it to the browser with appropriate `Access-Control-Allow-Origin` headers.
+4. The browser receives the fragment as if it were same-origin.
+
+### Nested references
+
+If a proxied fragment contains references to additional remote fragments (e.g., `site-b.com` references `site-c.com`), the display tool must route **all** subsequent fragment requests through the same proxy. The proxy does not need to parse or rewrite Markdown; the display tool simply prefixes every fragment URL before fetching.
+
+### Asset proxying
+
+Fragments often reference images, diagrams, videos, or other assets stored alongside the source Markdown in the remote repository. If a fragment from `site-b.com` contains a relative asset URL such as `./assets/diagram.png`, the browser will fail to load it directly due to the same CORS restrictions.
+
+Display tools must also route **asset requests** through the proxy:
+
+- **Relative asset URLs** in a proxied fragment must be resolved to absolute URLs and prefixed through the proxy:
+  `https://site-a.com/api/fragment-proxy?url=https://site-b.com/assets/diagram.png`
+- **Absolute asset URLs** pointing to other trusted guide origins must likewise be routed through the proxy.
+- The proxy should serve assets with correct MIME types and cache headers. Binary assets (images, videos, PDFs) do not require Markdown parsing — only safe URL validation and transparent byte forwarding.
+
+The display tool is responsible for resolving relative URLs to absolute before proxying. The proxy validates the resolved URL and streams the response.
+
+### Security requirements for proxy implementations
+
+- **Allowlist validation:** Only proxy known documentation domains or guide banks. Never accept arbitrary URLs.
+- **Path validation:** Ensure requested URLs match expected fragment or asset patterns (e.g., `*.md`, `*.png`, `*.jpg`, `*.svg`, `*.mp4`, `/guides/*`, `/fragments/*`, `/assets/*`).
+- **Rate limiting:** Prevent abuse and unexpected cost.
+- **No credential forwarding:** Do not forward browser cookies or auth headers to remote sites.
+- **Content-Type preservation:** Return the correct MIME type for proxied assets so browsers render images, videos, and other media correctly.
+
+For static hosting such as GitHub Pages, the proxy must be hosted separately (e.g., Cloudflare Worker, Netlify Edge Function, AWS Lambda, or a lightweight VPS).
+
+---
+
 ## Contributing Display Tools
 
 We welcome contributions toward reference display tool implementations (web viewer, CLI renderer, static exporter) that demonstrate the **full‑path context translation + predictive pre‑fetching** pattern. Please open an issue to discuss the contract before submitting a new implementation.

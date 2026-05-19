@@ -218,14 +218,14 @@ Docs Assembler intentionally keeps the authoring layer simple. We keep the edito
 
 Docs Assembler's authoring model works especially well with analytic and low-inflection languages (English, Chinese, etc.), where words do not change shape based on gender, case, or tense. For high-inflection languages (Russian, Arabic, Polish, German, Basque, etc.), high-quality localisation is best handled at the **display layer** through full-path assembly before translation.
 
-**Display tool authors** should read the [Display Tool Contract](./DISPLAY_TOOLS.md). This document describes the boundaries and known challenges so display tool authors can build correctly.
+**Display tool authors** should read the [Display Tool Contract](./DISPLAY_TOOLS.md). This document describes the boundaries and known challenges so display tool authors can build correctly. Guides can reference remote maps across repositories and domains; display tools handle cross-origin fragment loading via the proxy patterns described in the contract.
 
 We actively welcome contributions toward reference display tool implementations - that demonstrate this pattern. Please open an issue before starting to align on the boundary definitions.
 
 
 
 ### Released
-- 0.9.24
+- 0.9.26
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -468,12 +468,12 @@ Docs Assembler 有意保持编写层简单。我们在将渲染复杂性推给�
 
 Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语言（英语、中文等），其单词不会根据性别、格或时态改变形态。对于高屈折变化的语言（俄语、阿拉伯语、波兰语、德语、巴斯克语等），高质量的本地化最好通过**显示层**在翻译前进行完整路径组装来处理。
 
-**显示工具作者**应阅读 [Display Tool Contract](./DISPLAY_TOOLS.md)。该文档描述了边界和已知挑战，以便显示工具作者能够正确构建。
+**显示工具作者**应阅读 [Display Tool Contract](./DISPLAY_TOOLS.md)。该文档描述了边界和已知挑战，以便显示工具作者能够正确构建。指南可以跨仓库和域名引用远程映射；显示工具通过合约中描述的代理模式处理跨域片段加载。
 
 我们积极欢迎对参考显示工具实现的贡献——以展示此模式。请在开始前提交 issue，以便就边界定义达成一致。
 
 ### 已发布版本
-- 0.9.24
+- 0.9.26
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射
