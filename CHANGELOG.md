@@ -6,13 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## [Unreleased]
-
-### Added
-- Video tutorials (intro video)
-- Help files
 
 ### Upcoming
+- Video tutorials (intro video)
+- Help files
 - Move or copy a section of a branch
 - Make section of branch a new map
 - GitLab Pages integration
@@ -22,6 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Impact
 - Light theme
 
+
+
+## [0.9.32] - 2026-05-22
+
+### Added
+- **Automatic Update Notifications** — checks `updates.json` on activation to compare installed extension and template resource versions against the distribution repository, surfacing a control view with actions to update the extension or refresh resources when either is outdated.
 
 
 

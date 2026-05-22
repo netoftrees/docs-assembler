@@ -2,9 +2,17 @@
 
 [中文文档](#中文文档) | [Chinese Documentation](#中文文档)
 
-*This is an experimental port from a c# server/database application - to a GitHub repo/vscode extension. A concept driven by transformational conversations with a robotics firm - [HAL Robotics](https://hal-robotics.com).  
-Note: Docs Assembler is stable for daily use. We recommend testing thoroughly before deploying mission-critical documentation.*
+> **We think in webs, yet are sentenced to lines.**  
+> Human knowledge branches, loops, and layers - a living web of what-ifs, dependencies, and context. Traditional documents force this into linear prose, losing the very structure that makes expertise usable.
+>
+> Docs Assembler bridges the gap, giving form to the networks in a human mind - that others can follow, learn from, extend, or refine. It is a VS Code extension that lets you build documentation with **modular, reusable components** - like **code classes for your content**. Maps encapsulate text and decision trees, variables propagate everywhere. A change in one place updates every guide instantly.
+>
+> **Zero lock-in.** It publishes to plain Markdown. Uninstall the extension and your docs still work in any static site generator.
 
+- [**⭐ Star on GitHub**](https://github.com/netoftrees/docs-assembler)
+- [**Live Demo**](https://netoftrees.com/docs-assembler-demo/)
+- [**Report Issue**](https://github.com/netoftrees/docs-assembler/issues)
+- [**Discuss**](https://github.com/netoftrees/docs-assembler/discussions)
 
 
 ### *Solve documentation hell...*
@@ -13,24 +21,16 @@ Note: Docs Assembler is stable for daily use. We recommend testing thoroughly be
 - **Bug-prone updates** - edit one place, miss it in ten others.
 - **Brittle, unmanageable docs** that can't handle complex, branching scenarios.
 
-### *...by applying software engineering principles to text...*
-
-
-Human knowledge branches, and layers - a living web of what-ifs and dependencies. Traditional documents force this into linear prose, losing the very structure that makes expertise usable. 
-
-Docs Assembler bridges the gap, it is a way to give form to the networks in your mind that others can follow, learn from, extend, or refine. It is a VS Code extension. It lets you build documentation systems with **modular, reusable components**. Think of it like **classes for your content**: 
+### *...by applying software engineering principles to text:*
 
 - **Maps (.tsmap files)**: Self-contained documentation modules that can be nested and composed, just like classes. They encapsulate text, decision trees, or both.
 - **Variables**: Define reusable text snippets. Change one, update everywhere.
 - **Inheritance & Composition**: Build complex guides from simple, reusable blocks. A change in a base component propagates to all guides that use it.
 - **Compile to Docs**: Assemble these components on-the-fly into context-aware Markdown or HTML.
 
+### *...and maintain a single source of truth.*
 
-
-### *...and maintain a single source of truth*
-
-
- > **To truly understand how it works, we encourage you to explore the [Live Demo](https://netoftrees.com/docs-assembler-demo/).**  
+> **To truly understand how it works, we encourage you to explore the [Live Demo](https://netoftrees.com/docs-assembler-demo/).**
 
 
 ## Designed for Developers, by Developers
@@ -59,6 +59,14 @@ The design of Docs Assembler was driven by a fundamental need from teams like [H
     5. Browse to the .vsix file on your desktop.
 
 
+### Need help adopting Docs Assembler?
+
+If the concept feels abstract, we can help. We offer a **fixed-price "Docs Rescue" service**: we audit your existing documentation, rebuild your most critical guide (onboarding, troubleshooting, or API reference) as a Docs Assembler project, and hand you a fully working Git repo. You own everything. You edit it yourself going forward, but you don't have to build the first version from scratch.  
+**Open-source maintainers:** If your project is non-commercial and publicly available, mention it when you reach out — we adjust our rates accordingly.
+
+- [**Open a discussion to learn more**](https://github.com/netoftrees/docs-assembler/discussions)
+- [**Email us**](mailto:team@netoftrees.com)
+
 
 ## We can't see you - so tell us
 
@@ -67,11 +75,10 @@ We cannot see your downloads, your location, or how you use this tool.
 
 The only way we know you're using Docs Assembler is if **you tell us**:
 
+- [**⭐ Star on GitHub**](https://github.com/netoftrees/docs-assembler) - the easiest way to show support
 - [**Open an issue**](https://github.com/netoftrees/docs-assembler/issues) - bugs or feature requests
-- [**Start a discussion**](https://github.com/netoftrees/docs-assembler/discussions) - questions or ideas
+- [**Start a discussion**](https://github.com/netoftrees/docs-assembler/discussions) - questions, ideas, or to ask about our docs-building service
 - [**Email us**](mailto:team@netoftrees.com) - anything else
-- [**⭐ Star on GitHub**](https://github.com/netoftrees/docs-assembler) - if you find it useful
-
 
 
 ## Live demo
@@ -225,7 +232,7 @@ We actively welcome contributions toward reference display tool implementations 
 
 
 ### Released
-- 0.9.26
+- 0.9.32
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -294,28 +301,36 @@ website:
 
 [英文文档](#docs-assembler---treat-documentation-like-code) | [English Documentation](#docs-assembler---treat-documentation-like-code)
 
-# Docs Assembler - 像写代码一样写文档
+> **我们本以网状思考，却被判以线性书写。**  
+> 人类知识会分支、循环、分层--一张由假设与依赖构成的活网。传统文档却强行塞进线性文字，丢掉了让知识真正可用的结构。
+>
+> Docs Assembler 填补了这个缺口，将人脑中的思维网络具象化--让他人能够沿着你的思路学习、扩展或完善。它是一个 VS Code 扩展，让你用**模块化、可复用组件**构建文档--可以理解为**内容的代码类**。映射封装文本与决策树，变量处处传播。一处改动，所有指南即时更新。
+>
+> **零锁定。** 发布为纯 Markdown。卸载扩展后，你的文档仍可在任何静态站点生成器中正常工作。
 
-*这是从 C# 服务端/数据库应用移植而来的实验性项目，转为 GitHub 仓库 + VS Code 扩展。概念源于与机器人公司 [HAL Robotics](https://hal-robotics.com) 的一次突破性交流。  
-注意：Docs Assembler 稳定可靠，适合日常使用。建议在部署关键任务文档前充分测试。*
+- [**⭐ 在 GitHub 上标星**](https://github.com/netoftrees/docs-assembler)
+- [**在线演示**](https://netoftrees.com/docs-assembler-demo/)
+- [**报告问题**](https://github.com/netoftrees/docs-assembler/issues)
+- [**讨论**](https://github.com/netoftrees/docs-assembler/discussions)
 
-### 终结文档地狱：
 
-- **内容四处扩散、重复**——指南、手册、Wiki 里到处都是。
+### *终结文档地狱……*
+
+- **内容四处扩散、重复**--指南、手册、Wiki 里到处都是。
 - **更新极易出错**：改一处，漏十处。
 - **文档脆弱、不可维护**，无法应对复杂分支场景。
 
-### …将软件工程原则应用于文本。
+### *……将软件工程原则应用于文本：*
 
-人类知识会分支、循环、分层——一张由假设与依赖构成的活网。传统文档却强行塞进线性文字，丢掉了让知识真正可用的结构。  
-Docs Assembler 填补了这个缺口。它让你头脑中的网络具象化——让他人能够沿着你的思路学习，或用他们自己的思考去扩展、完善你的思路。它是一个 VS Code 扩展，让你用**模块化、可复用组件**构建文档系统。可以理解为**内容的类**。
-
-- **映射（.tsmap 文件）**：自包含的文档模块，可嵌套、可组合，就像类。封装文本或决策树。
+- **映射（.tsmap 文件）**：自包含的文档模块，可嵌套组合，就像类。封装文本、决策树，或两者兼有。
 - **变量**：定义可复用文本片段。改一处，全局更新。
 - **继承与组合**：用简单可复用块搭建复杂指南。基类改动自动传播到所有引用处。
 - **编译为文档**：实时组装组件，输出上下文感知的 Markdown 或 HTML。
 
-### *维护单一事实来源。*
+### *……并维护单一事实来源。*
+
+> **想真正理解它如何运作，建议先探索[在线演示](https://netoftrees.com/docs-assembler-demo/)。**
+
 
 ## 为开发者设计，由开发者打造
 
@@ -323,13 +338,13 @@ Docs Assembler 的设计源于 [HAL Robotics](https://hal-robotics.com) 等团�
 
 *   **熟悉与掌控：** 整个系统基于你已熟悉和信任的工具。文档与代码共存于 Git 仓库。内容用 Markdown 编写，任何编辑器均可编辑。结构用 JSON 定义，可手动查看和修改。
 *   **绝对所有权：** 你实际持有自己的文档。它们是你仓库里的 Markdown 和 JSON。永远不会被订阅绑架，或被 SaaS 平台勒索。
-*   **零锁定：** 这是关键特性。停止使用 Docs Assembler 毫无代价。因为它发布为标准 Markdown，直接卸载扩展即可——文档仍完全可用、可编辑，可直接用于任何其他静态站点生成器。你的内容永远属于你。
+*   **零锁定：** 这是关键特性。停止使用 Docs Assembler 毫无代价。因为它发布为标准 Markdown，直接卸载扩展即可--文档仍完全可用、可编辑，可直接用于任何其他静态站点生成器。你的内容永远属于你。
 *   **无缝发布：** 设计上直接发布到 [GitHub Pages](https://docs.github.com/zh/pages)，开发者已熟悉的平台。Markdown 中嵌入的 Liquid 脚本也能正常工作。
 *   **为规模而生：** 正如类将大型软件系统拆分为小块，Docs Assembler 的模块将海量文档集分解为可管理、可分发的小单元，不同团队可分别维护。
-*   **工程级严谨：** 为文档带来真正的开发工具——变量有 IntelliSense，发布前完整校验，自动处理作为变量定义的相对 URL。这些 URL 引用的本地文件会被自动发现并复制到发布文件夹，防止链接失效，确保健壮性。
+*   **工程级严谨：** 为文档带来真正的开发工具--变量有 IntelliSense，发布前完整校验，自动处理作为变量定义的相对 URL。这些 URL 引用的本地文件会被自动发现并复制到发布文件夹，防止链接失效，确保健壮性。
 *   **国际化设计：** 指南/片段模型适用于分析性语言（英语、中文），词形保持不变。在高屈折语言（俄语、阿拉伯语）中，同一子指南在不同调用位置可能需要不同的性、格或数。显示工具有意先组装完整路径再渲染或翻译，因此作者只需编写纯 Markdown，语法在边缘处自适应。
 
-> **想真正理解它如何运作，建议先探索[在线演示](https://netoftrees.com/docs-assembler-demo/)。**
+
 
 ## 安装
 
@@ -342,17 +357,18 @@ Docs Assembler 的设计源于 [HAL Robotics](https://hal-robotics.com) 等团�
     4. 选择 `从 VSIX 安装...`。
     5. 浏览到桌面上的 .vsix 文件。
 
-## 我们看不到你——所以请告诉我们
+## 我们看不到你--所以请告诉我们
 
 Docs Assembler **不收集任何分析数据、使用数据或崩溃报告**。  
 我们无法看到你的下载量、所在位置或使用方式。
 
 我们唯一知道你正在使用 Docs Assembler 的方式，就是**你主动告诉我们**：
 
+- [**⭐ 在 GitHub 上标星**](https://github.com/netoftrees/docs-assembler) - 最简单的支持方式
 - [**提交 Issue**](https://github.com/netoftrees/docs-assembler/issues) - Bug 报告或功能请求
-- [**发起讨论**](https://github.com/netoftrees/docs-assembler/discussions) - 问题或想法
+- [**发起讨论**](https://github.com/netoftrees/docs-assembler/discussions) - 问题、想法，或咨询我们的文档构建服务
 - [**给我们发邮件**](mailto:team@netoftrees.com) - 其他事宜
-- [**⭐ 在 GitHub 上标星**](https://github.com/netoftrees/docs-assembler) - 如果你觉得有用
+
 
 ## 在线演示
 
@@ -369,17 +385,22 @@ Docs Assembler **不收集任何分析数据、使用数据或崩溃报告**。
     - 开发、测试和预览文档变更所需的一切。
     - 本地使用 Jekyll 的说明即将发布。
 
+
+
 ### 扩展更新后请清除 VS Code 历史记录：
 - 打开命令面板：`Cmd+Shift+P`
 - 输入：`Clear Editor History`
 
+
+
 ## 快速入门
 
 使用 HAL Robotics 文档仓库的分支，已初始化为使用映射：[HAL.Documentation.maps](https://github.com/CompositeFlows/HAL.Documentation.maps)。  
-该示例适合展示简单用法——只有共享变量和步骤，没有级联映射。  
-#### 注意：这不是 HAL Robotics 当前版本的文档——详见下文[关于 HAL Robotics 的最新信息](#关于-hal-robotics-的最新信息)
+该示例适合展示简单用法--只有共享变量和步骤，没有级联映射。  
+#### 注意：这不是 HAL Robotics 当前版本的文档--详见下文[关于 HAL Robotics 的最新信息](#关于-hal-robotics-的最新信息)
 
 [<img src="./assets/Walkthrough-thumbnail.png">](https://vimeo.com/1013352380?share=copy#t=0)
+
 
 ### 映射
 - 主要构建块是**映射**。
@@ -387,13 +408,18 @@ Docs Assembler **不收集任何分析数据、使用数据或崩溃报告**。
 - 功能类似软件中的**类**。
 - [映射设计上易于扩展](#既能处理复杂也能应对规模)
 
+
 #### 在**映射编辑器**与**映射 JSON 编辑器**之间切换：
 
 ![Docs Assembler map json editor gif](./assets/DocsAssemblerJsonDec24.gif)
 
+
+
 #### 在**映射差异视图**与**映射 JSON 差异视图**之间切换：
 
 ![Docs Assembler diff map json gif](./assets/DocsAssemblerDiff.gif)
+
+
 
 ### 步骤
 - **映射**是由**步骤**组成的文档段落。
@@ -403,6 +429,8 @@ Docs Assembler **不收集任何分析数据、使用数据或崩溃报告**。
 
 ![Docs Assembler steps gif](./assets/DocsAssemblerSteps.gif)
 
+
+
 ### 映射可引用其他映射
 - 在另一**映射**中引用的**映射**，显示为单个**步骤**。
 - 若被引用的**映射**有**出口（exits）**，需将其他**映射**或**步骤**链接到这些**出口**上。
@@ -410,11 +438,15 @@ Docs Assembler **不收集任何分析数据、使用数据或崩溃报告**。
 
 ![Docs Assembler charts gif](./assets/DocsAssemblerCharts.gif)
 
+
+
 ### 变量
 - **变量**定义可复用的 **Markdown 文本**。
 - 定义相对链接的变量，在发布到目标文档时自动调整，确保链接有效。
 
 ![Docs Assembler variables gif](./assets/DocsAssemblerVariables.gif)
+
+
 
 ### 变量可引用其他变量
 - **变量**的 Markdown 文本可引用其他**变量**。
@@ -422,29 +454,40 @@ Docs Assembler **不收集任何分析数据、使用数据或崩溃报告**。
 
 ![Docs Assembler variables nested gif](./assets/DocsAssemblerNestedVariables.gif)
 
+
+
 ### 编译为文档
 **发布**时，**Docs Assembler** 读取选中的**映射**，**校验**并组装所有引用的**映射**和 **Markdown 文件**，展开变量，复制引用的资源文件，最终将结果**编译**为 **Markdown** 或 **HTML** 文件，输出到仓库中的**发布**文件夹。
 
 ![Docs Assembler publish gif](./assets/DocsAssemblerPublish.gif)
+
+
 
 ### 对比已发布与线上版本
 使用**对比视图**查看发布文件与 **docs** 文件夹中文件的差异。
 
 ![Docs Assembler compare gif](./assets/DocsAssemblerCompare.gif)
 
+
+
 ### 将发布内容移至线上
 若变更符合预期，点击移动按钮，将发布文件移至 **docs** 文件夹。若使用 **GitHub Pages**，**docs** 即为根文件夹。
 
 ![Docs Assembler live gif](./assets/DocsAssemblerLive.gif)
+
+
 
 ### 既能处理复杂也能应对规模
 - 最简单的**映射**：单个**步骤**和一个 **Markdown 文件**。
 - 稍复杂：单一路径的**步骤**序列，如一本书或手册。
 - 最复杂：**映射**是一个**决策树**，多个**步骤**指向其他**映射**，这些映射又指向更多映射……展开后的结果极为庞大，若不拆分为可管理、离散、可复用的单元，几乎无法构建或维护。正如代码中用**类**做拆分。
 
+
+
 ## 发布输出示例
 
 ![netoftrees C# server/database applications gif](./assets/netoftreesCsharp.gif)
+
 
 #### 上图说明
 - 展示 C# 服务端/数据库应用，其中**步骤**存储在数据库中。
@@ -455,12 +498,16 @@ Docs Assembler **不收集任何分析数据、使用数据或崩溃报告**。
     - 所有可能的**附件**全部展开时，新手完成任务的**所有步骤**都会呈现。
 - 复用**映射**可轻松构建和维护**指南**，用户可根据自身技能水平定制显示内容。
 
+
+
 #### 下图说明
 - 展示 C# 服务端/数据库应用的编辑器界面。
     - 显示构建上述指南所用的引用映射（含嵌套映射）。
     - 大多数映射也会在其他指南中复用。
 
 ![netoftrees C# server/database applications gif](./assets/netoftreesCsharpMaps.gif)
+
+
 
 ## 架构与显示工具约定
 
@@ -470,10 +517,12 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 
 **显示工具作者**应阅读 [Display Tool Contract](./DISPLAY_TOOLS.md)。该文档描述了边界和已知挑战，以便显示工具作者能够正确构建。指南可以跨仓库和域名引用远程映射；显示工具通过合约中描述的代理模式处理跨域片段加载。
 
-我们积极欢迎对参考显示工具实现的贡献——以展示此模式。请在开始前提交 issue，以便就边界定义达成一致。
+我们积极欢迎对参考显示工具实现的贡献--以展示此模式。请在开始前提交 issue，以便就边界定义达成一致。
+
+
 
 ### 已发布版本
-- 0.9.26
+- 0.9.32
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射
@@ -490,15 +539,19 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
     - 移动、克隆、复制粘贴映射文件夹时自动调整相对 URL
     - 移动、重命名映射资源文件时自动更新引用和映射超链接
     - 快捷键
-    - json 步骤（视频步骤）- json 智能提示、诊断、TextMate 和语义令牌
+    - JSON 步骤（视频步骤）- JSON 智能提示、诊断、TextMate 和语义令牌
     - 引用远程仓库中的指南
     - 概览视图
     - 仓库初始化、资源更新和迁移
+
+
 
 ### 下一步
 - 视频教程
     - 介绍视频
 - 帮助文件
+
+
 
 ### 即将推出
 - 移动或复制分支中的一段
@@ -510,11 +563,15 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
     - 影响分析
 - 浅色主题
 
+
+
 ### 链接
 
 [team@netoftrees.com](mailto:team@netoftrees.com)  
 [www.netoftrees.com](https://www.netoftrees.com/)  
 [x.com/docsassembler](https://x.com/docsassembler)
+
+
 
 ### 关于 HAL Robotics 的最新信息
 
