@@ -21,6 +21,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.34] - 2026-05-24
+
+### Added
+- **Community Health Files** - added `SECURITY.md`, `SUPPORT.md`, and `FAQ.md` to improve contributor and user onboarding.
+
+### Fixed
+- **Webview View Asset Path** - corrected asset path to resolve missing images.
+
+
+
 ## [0.9.33] - 2026-05-23
 
 ### Fixed

@@ -98,12 +98,6 @@ The only way we know you're using Docs Assembler is if **you tell us**:
 
 
 
-### After an extension update clear vscode history:  
-- Open the Command Palette: `Cmd+Shift+P`  
-- Type: `Clear Editor History`
-
-
-
 ## Quick walkthrough
 Using a fork of the HAL Robotics documentation repo, initialised to use maps - [HAL.Documentation.maps](https://github.com/CompositeFlows/HAL.Documentation.maps).   
 It serves as a good example for simple use cases - as there are only shared variables and steps, no linked maps. 
@@ -232,7 +226,7 @@ We actively welcome contributions toward reference display tool implementations 
 
 
 ### Released
-- 0.9.33
+- 0.9.34
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -522,7 +516,7 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 
 
 ### 已发布版本
-- 0.9.33
+- 0.9.34
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射

@@ -200,7 +200,7 @@ These guidelines improve translation quality for any LLM.
 
 ## Remote Guide Loading & Same-Origin Policy
 
-Docs Assembler guides may reference fragments hosted on different origins — for example, a guide on `docs.example.com` may embed a sub-guide from `support.partner.org`. Browsers enforce the Same-Origin Policy and CORS; servers do not. Display tools therefore **must** route cross-origin fragment requests through a server-side proxy or edge function.
+Docs Assembler guides may reference fragments hosted on different origins - for example, a guide on `docs.example.com` may embed a sub-guide from `support.partner.org`. Browsers enforce the Same-Origin Policy and CORS; servers do not. Display tools therefore **must** route cross-origin fragment requests through a server-side proxy or edge function.
 
 ### Recommended proxy pattern
 
@@ -223,7 +223,7 @@ Display tools must also route **asset requests** through the proxy:
 - **Relative asset URLs** in a proxied fragment must be resolved to absolute URLs and prefixed through the proxy:
   `https://site-a.com/api/fragment-proxy?url=https://site-b.com/assets/diagram.png`
 - **Absolute asset URLs** pointing to other trusted guide origins must likewise be routed through the proxy.
-- The proxy should serve assets with correct MIME types and cache headers. Binary assets (images, videos, PDFs) do not require Markdown parsing — only safe URL validation and transparent byte forwarding.
+- The proxy should serve assets with correct MIME types and cache headers. Binary assets (images, videos, PDFs) do not require Markdown parsing - only safe URL validation and transparent byte forwarding.
 
 The display tool is responsible for resolving relative URLs to absolute before proxying. The proxy validates the resolved URL and streams the response.
 
