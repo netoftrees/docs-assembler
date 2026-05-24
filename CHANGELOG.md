@@ -21,10 +21,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.33] - 2026-05-23
+
+### Fixed
+- **Version Comparison Type Error** - corrected utility to use the `.version` string from `semver.coerce` instead of passing the `SemVer` object directly.
+
+
+
 ## [0.9.32] - 2026-05-22
 
 ### Added
-- **Automatic Update Notifications** — checks `updates.json` on activation to compare installed extension and template resource versions against the distribution repository, surfacing a control view with actions to update the extension or refresh resources when either is outdated.
+- **Automatic Update Notifications** - checks `updates.json` on activation to compare installed extension and template resource versions against the distribution repository, surfacing a control view with actions to update the extension or refresh resources when either is outdated.
 
 
 

@@ -62,7 +62,7 @@ The design of Docs Assembler was driven by a fundamental need from teams like [H
 ### Need help adopting Docs Assembler?
 
 If the concept feels abstract, we can help. We offer a **fixed-price "Docs Rescue" service**: we audit your existing documentation, rebuild your most critical guide (onboarding, troubleshooting, or API reference) as a Docs Assembler project, and hand you a fully working Git repo. You own everything. You edit it yourself going forward, but you don't have to build the first version from scratch.  
-**Open-source maintainers:** If your project is non-commercial and publicly available, mention it when you reach out — we adjust our rates accordingly.
+**Open-source maintainers:** If your project is non-commercial and publicly available, mention it when you reach out - we adjust our rates accordingly.
 
 - [**Open a discussion to learn more**](https://github.com/netoftrees/docs-assembler/discussions)
 - [**Email us**](mailto:team@netoftrees.com)
@@ -232,7 +232,7 @@ We actively welcome contributions toward reference display tool implementations 
 
 
 ### Released
-- 0.9.32
+- 0.9.33
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -522,7 +522,7 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 
 
 ### 已发布版本
-- 0.9.32
+- 0.9.33
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射
