@@ -21,6 +21,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.35] - 2026-05-25
+
+### Fixed
+- **Progress Dialogue Cancellation State** - added `_isCancelled` flag so `isCancelled()` remains accurate after the dialog is cleaned up.
+
+
+
 ## [0.9.34] - 2026-05-24
 
 ### Added
