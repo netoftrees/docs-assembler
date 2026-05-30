@@ -21,6 +21,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.36] - 2026-05-30
+
+### Added
+- **Initialisation progress** - added progress information message.
+
+
+
 ## [0.9.35] - 2026-05-25
 
 ### Fixed
