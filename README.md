@@ -106,6 +106,19 @@ It serves as a good example for simple use cases - as there are only shared vari
 [<img src="./assets/Walkthrough-thumbnail.png">](https://vimeo.com/1013352380?share=copy#t=0)
 
 
+## Quick walkthrough: *Referenced, Not Copied*
+
+A one-minute tour of the [Live Demo](https://netoftrees.com/docs-assembler-demo/).  
+Watch two users take completely different paths through the same guide, merge back into shared content, expand hidden detail on demand, and see how one edit updates every branch instantly.
+
+[<img src="./assets/Referenced_not_copied_thumbnail.png">](https://vimeo.com/1199837317/eb511e19eb?share=copy&fl=sv&fe=ci)
+
+[<img src="https://cdn.jsdelivr.net/gh/netoftrees/docs-assembler@main/assets/Referenced-Not-Copied-thumbnail.jpg">](https://vimeo.com/1199837317/eb511e19eb?share=copy&fl=sv&fe=ci)
+
+*Vimeo blocked? [Watch directly in 4K](https://cdn.jsdelivr.net/gh/netoftrees/docs-assembler@main/assets/ReferencedNotCopied_4_en_subtitles.mov) (works everywhere, no tracking)*
+
+
+
 ### Maps
 - The main building block is a **map**.
 - It is a **json** file with a **.tsmap** extension.
@@ -226,7 +239,7 @@ We actively welcome contributions toward reference display tool implementations 
 
 
 ### Released
-- 0.9.36
+- 0.9.37
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -387,13 +400,15 @@ Docs Assembler **不收集任何分析数据、使用数据或崩溃报告**。
 
 
 
-## 快速入门
+## 快速入门：《引用而非复制》
 
-使用 HAL Robotics 文档仓库的分支，已初始化为使用映射：[HAL.Documentation.maps](https://github.com/CompositeFlows/HAL.Documentation.maps)。  
-该示例适合展示简单用法--只有共享变量和步骤，没有级联映射。  
-#### 注意：这不是 HAL Robotics 当前版本的文档--详见下文[关于 HAL Robotics 的最新信息](#关于-hal-robotics-的最新信息)
+一分钟[在线演示](https://netoftrees.com/docs-assembler-demo/)导览。  
+观看两位用户如何通过完全不同的路径浏览同一指南，合并回共享内容，按需展开隐藏细节，并了解一次编辑如何即时更新所有分支。
 
-[<img src="./assets/Walkthrough-thumbnail.png">](https://vimeo.com/1013352380?share=copy#t=0)
+[<img src="https://cdn.jsdelivr.net/gh/netoftrees/docs-assembler@main/assets/Referenced-Not-Copied-thumbnail.jpg">](https://vimeo.com/1199837317/eb511e19eb?share=copy&fl=sv&fe=ci)
+
+*无法访问 Vimeo？[直接观看 4K 版本](https://cdn.jsdelivr.net/gh/netoftrees/docs-assembler@main/assets/ReferencedNotCopied_4_en_subtitles.mov)（全球可用，无跟踪）*
+
 
 
 ### 映射
@@ -516,7 +531,7 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 
 
 ### 已发布版本
-- 0.9.36
+- 0.9.37
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射

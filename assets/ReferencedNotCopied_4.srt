@@ -1,0 +1,120 @@
+1
+01:00:00,966 --> 01:00:03,033
+<b>This single guide has more possible paths</b>
+
+2
+01:00:03,166 --> 01:00:05,933
+<b>than Wikipedia has pages.</b>
+
+3
+01:00:06,099 --> 01:00:06,699
+<b>But to the reader,</b>
+
+4
+01:00:06,866 --> 01:00:08,833
+<b>it is just prose.</b>
+
+5
+01:00:09,000 --> 01:00:11,099
+<b>Watch.</b>
+
+6
+01:00:11,266 --> 01:00:12,033
+<b>Two readers.</b>
+
+7
+01:00:12,199 --> 01:00:13,599
+<b>Two different paths.</b>
+
+8
+01:00:13,766 --> 01:00:15,900
+<b>The guide adapts.</b>
+
+9
+01:00:16,066 --> 01:00:16,599
+<b>Here,</b>
+
+10
+01:00:16,766 --> 01:00:18,233
+<b>both paths merge.</b>
+
+11
+01:00:18,400 --> 01:00:19,366
+<b>The same source.</b>
+
+12
+01:00:19,533 --> 01:00:20,099
+<b>Referenced,</b>
+
+13
+01:00:20,266 --> 01:00:21,566
+<b>not copied.</b>
+
+14
+01:00:21,733 --> 01:00:22,933
+<b>In a linear document,</b>
+
+15
+01:00:23,099 --> 01:00:25,000
+<b>this would be two guides to maintain.</b>
+
+16
+01:00:25,166 --> 01:00:25,633
+<b>Here,</b>
+
+17
+01:00:25,766 --> 01:00:27,400
+<b>it is one source.</b>
+
+18
+01:00:27,566 --> 01:00:29,133
+<b>The paths diverge again.</b>
+
+19
+01:00:29,300 --> 01:00:30,300
+<b>Different effort.</b>
+
+20
+01:00:30,466 --> 01:00:32,099
+<b>Same tower.  </b>
+
+21
+01:00:32,266 --> 01:00:37,066
+<b>And merge.</b>
+
+22
+01:00:37,233 --> 01:00:38,300
+<b>Same crops.</b>
+
+23
+01:00:38,500 --> 01:00:39,733
+<b>Different paths.</b>
+
+24
+01:00:39,900 --> 01:00:40,699
+<b>One edit.</b>
+
+25
+01:00:40,866 --> 01:00:43,766
+<b>Every branch updated.</b>
+
+26
+01:00:43,933 --> 01:00:49,400
+<b>The detail is there.</b>
+
+27
+01:00:49,566 --> 01:00:51,466
+<b>But not in the way.</b>
+
+28
+01:00:52,766 --> 01:00:54,466
+<b>Complex, branching knowledge.</b>
+
+29
+01:00:54,633 --> 01:00:56,566
+<b>Maintained like a single document.</b>
+
+30
+01:00:56,733 --> 01:00:57,699
+<b>Delivered like prose.</b>
+
