@@ -21,6 +21,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.39] - 2026-06-10
+
+### Changed
+- **README Structure** - minor reordering of sections for improved readability.
+
+
+
 ## [0.9.38] - 2026-06-10
 
 ### Changed
