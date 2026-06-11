@@ -30,12 +30,13 @@
 
 ### *...and maintain a single source of truth.*
 
-A one-minute tour of the [Live Demo](https://netoftrees.com/docs-assembler-demo/).  
+One minute. Two people. One source. Every branch updated instantly.
+
 Watch two users take completely different paths through the same guide, merge back into shared content, expand hidden detail on demand, and see how one edit updates every branch instantly.
 
 [<img src="./assets/Referenced_not_copied_thumbnail.png">](https://vimeo.com/1199837317/eb511e19eb?share=copy&fl=sv&fe=ci)
 
-> **To truly understand how it works, we encourage you to explore the [Live Demo](https://netoftrees.com/docs-assembler-demo/).**
+> **Explore the [Live Demo](https://netoftrees.com/docs-assembler-demo/) yourself to go deeper.**
 
 
 
@@ -65,6 +66,7 @@ The design of Docs Assembler was driven by a fundamental need from teams like [H
     5. Browse to the .vsix file on your desktop.
 
 
+
 ### Need help adopting Docs Assembler?
 
 If the concept feels abstract, we can help. We offer a **fixed-price "Docs Rescue" service**: we audit your existing documentation, rebuild your most critical guide (onboarding, troubleshooting, or API reference) as a Docs Assembler project, and hand you a fully working Git repo. You own everything. You edit it yourself going forward, but you don't have to build the first version from scratch.  
@@ -72,6 +74,7 @@ If the concept feels abstract, we can help. We offer a **fixed-price "Docs Rescu
 
 - [**Open a discussion to learn more**](https://github.com/netoftrees/docs-assembler/discussions)
 - [**Email us**](mailto:team@netoftrees.com)
+
 
 
 ## We can't see you - so tell us
@@ -224,7 +227,7 @@ We actively welcome contributions toward reference display tool implementations 
 
 
 ### Released
-- 0.9.39
+- 0.9.40
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -321,13 +324,13 @@ website:
 
 ### *……并维护单一事实来源。*
 
-一分钟[在线演示](https://netoftrees.com/docs-assembler-demo/)导览。  
+一分钟。两个人。一个来源。所有分支即时更新。
+
 观看两位用户如何通过完全不同的路径浏览同一指南，合并回共享内容，按需展开隐藏细节，并了解一次编辑如何即时更新所有分支。
 
-[<img src="Referenced_not_copied_thumbnail.png">](https://vimeo.com/1199837317/eb511e19eb?share=copy&fl=sv&fe=ci)
+[<img src="./assets/Referenced_not_copied_thumbnail.png">](https://vimeo.com/1199837317/eb511e19eb?share=copy&fl=sv&fe=ci)
 
-> **想真正理解它如何运作，建议探索[在线演示](https://netoftrees.com/docs-assembler-demo/)。**
-
+> **亲自探索[在线演示](https://netoftrees.com/docs-assembler-demo/)，深入了解。**
 
 
 ## 为开发者设计，由开发者打造
@@ -511,7 +514,7 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 
 
 ### 已发布版本
-- 0.9.39
+- 0.9.40
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射
@@ -570,3 +573,4 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 [github.com/HALRobotics/HAL.Documentation](https://github.com/HALRobotics/HAL.Documentation)  
 官网：
 [hal-robotics.com](https://hal-robotics.com/)
+
