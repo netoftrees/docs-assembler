@@ -30,14 +30,13 @@
 
 ### *...and maintain a single source of truth.*
 
-One minute. Two people. One source. Every branch updated instantly.
+One source. Two paths. No copies.
 
 Watch two users take completely different paths through the same guide, merge back into shared content, expand hidden detail on demand, and see how one edit updates every branch instantly.
 
-[<img src="./assets/Referenced_not_copied_thumbnail.png">](https://vimeo.com/1199837317/eb511e19eb?share=copy&fl=sv&fe=ci)
+[![One-minute tour: Referenced, not copied](./assets/Referenced_not_copied_thumbnail.png)](https://vimeo.com/1199837317/eb511e19eb?share=copy&fl=sv&fe=ci)
 
 > **Explore the [Live Demo](https://netoftrees.com/docs-assembler-demo/) yourself to go deeper.**
-
 
 
 ## Designed for Developers, by Developers
@@ -227,7 +226,7 @@ We actively welcome contributions toward reference display tool implementations 
 
 
 ### Released
-- 0.9.40
+- 0.9.41
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
@@ -324,11 +323,11 @@ website:
 
 ### *……并维护单一事实来源。*
 
-一分钟。两个人。一个来源。所有分支即时更新。
+一个来源。两条路径。零复制。
 
 观看两位用户如何通过完全不同的路径浏览同一指南，合并回共享内容，按需展开隐藏细节，并了解一次编辑如何即时更新所有分支。
 
-[<img src="./assets/Referenced_not_copied_thumbnail.png">](https://vimeo.com/1199837317/eb511e19eb?share=copy&fl=sv&fe=ci)
+[![一分钟导览：引用而非复制](./assets/Referenced_not_copied_thumbnail.png)](https://vimeo.com/1199837317/eb511e19eb?share=copy&fl=sv&fe=ci)
 
 > **亲自探索[在线演示](https://netoftrees.com/docs-assembler-demo/)，深入了解。**
 
@@ -514,7 +513,7 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 
 
 ### 已发布版本
-- 0.9.40
+- 0.9.41
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射
@@ -573,4 +572,3 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 [github.com/HALRobotics/HAL.Documentation](https://github.com/HALRobotics/HAL.Documentation)  
 官网：
 [hal-robotics.com](https://hal-robotics.com/)
-

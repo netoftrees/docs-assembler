@@ -21,6 +21,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.41] - 2026-06-12
+
+### Changed
+- **README Structure** - minor reordering of sections for improved readability.
+
+### Fixed
+- **Shared Step Filepath** - corrected an issue where the path of a shared step was blank in the lens.
+
+
+
 ## [0.9.40] - 2026-06-11
 
 ### Changed
