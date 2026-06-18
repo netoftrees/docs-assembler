@@ -21,6 +21,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.42] - 2026-06-18
+
+### Changed
+- **Webview Heading Line Height** - adjusted CSS line height for headings in webview editors for improved readability.
+
+
+
 ## [0.9.41] - 2026-06-12
 
 ### Changed
