@@ -226,7 +226,7 @@ We actively welcome contributions toward reference display tool implementations 
 
 
 ### Released
-- 0.9.42
+- 0.9.43
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
