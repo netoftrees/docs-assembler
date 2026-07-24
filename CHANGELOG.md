@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.44] - 2026-07-24
+
+### Added
+- **Variable Reference Commenting** - in `.tsstp` Markdown files, prefixing a variable reference with `¬` (e.g., `¬{{::alias.variableName}}`) now comments out the reference.
+
+
 ## [0.9.43] - 2026-06-21
 
 ### Changed
