@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.45] - 2026-08-09
+
+### Fixed
+- **Splice Root Step** - fixed a bug where the splice command could fail to remove the root step of a map.
+
+
 ## [0.9.44] - 2026-07-24
 
 ### Added
