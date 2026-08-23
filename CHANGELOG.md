@@ -21,6 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+## [0.9.53] - 2026-08-23
+
+### Changed
+- **JSON & Diff Editors** – removed the custom `jsonEditor` and `diffEditor` implementations. Recent VS Code improvements now allow a custom text document to be opened in both the extension’s custom editor and the built-in JSON editor (including diff views), making the separate editors redundant. This change eliminates compatibility issues and standardises the JSON editing experience.
+
+
 ## [0.9.45] - 2026-08-09
 
 ### Fixed

@@ -25,7 +25,7 @@
 
 - **Maps (.tsmap files)**: Self-contained documentation modules that can be nested and composed, just like classes. They encapsulate text, decision trees, or both.
 - **Variables**: Define reusable text snippets. Change one, update everywhere.
-- **Inheritance & Composition**: Build complex guides from simple, reusable blocks. A change in a base component propagates to all guides that use it.
+- **Routing & Nesting**: One map can call another and return, giving clean branching logic. Nesting hides complexity while keeping everything organised.
 - **Compile to Docs**: Assemble these components on-the-fly into context-aware Markdown or HTML.
 
 ### *...and maintain a single source of truth.*
@@ -44,7 +44,7 @@ Watch two users take completely different paths through the same guide, merge ba
 The design of Docs Assembler was driven by a fundamental need from teams like [HAL Robotics](https://hal-robotics.com): to have a powerful system that *respects developer workflows and sovereignty*. This isn't just a platform; it's a philosophy built on core principles that will feel immediately right:
 
 *   **Familiarity & Control:** The entire system is built on the tools you already know and trust. Your documentation lives in Git repos, right alongside your code. Content is written in Markdown files, editable in any editor. Structure is defined in JSON files you can view and edit manually.
-*   **Absolute Ownership:** You have physical possession of your documentation. It's your Markdown and JSON in your repo. You are never trapped in a subscription or held ransom by a SaaS platform.
+*   **Absolute Ownership:** You have physical possession of your documentation. It's your Markdown and JSON in your repo, with full history, rollback, and offline work. You are never trapped in a subscription or held ransom by a SaaS platform.
 *   **Zero Lock-In:** This is a critical feature. There are no consequences if you stop using Docs Assembler. Since it publishes to standard Markdown, you can uninstall the extension and your documentation is still perfectly usable, editable, and ready for any other static site generator. Your content is always yours.
 *   **Seamless Publishing:** It's designed to publish directly to [GitHub Pages](https://docs.github.com/en/pages), a platform developers already understand. Even Liquid scripts embedded in your Markdown work as expected.
 *   **Built to Scale:** Like classes break down massive software systems, Docs Assembler's modules are designed to decompose enormous documentation sets into manageable, distributable units that different teams can own.
@@ -116,13 +116,6 @@ The only way we know you're using Docs Assembler is if **you tell us**:
 #### Switching between **Map Editor** and **Map Json Editor**:
 
 ![Docs Assembler map json editor gif](./assets/DocsAssemblerJsonDec24.gif)
-
-
-
-#### Switching between **Maps Diff** and **Maps Json Diff**:
-
-![Docs Assembler diff map json gif](./assets/DocsAssemblerDiff.gif)
-
 
 
 ### Steps
@@ -226,13 +219,12 @@ We actively welcome contributions toward reference display tool implementations 
 
 
 ### Released
-- 0.9.45
+- 0.9.53
     - Map folders
     - Markdown Intellisense, diagnostics and TextMate and semantic grammars for steps and variables
     - Publish listed maps
     - Moving or copying map folder corrects relative urls
     - Map json editor
-    - Diff map json editor
     - Maps explorer
     - Map hyper links
     - GitHub Pages integration
@@ -406,12 +398,6 @@ Docs Assembler **不收集任何分析数据、使用数据或崩溃报告**。
 
 
 
-#### 在**映射差异视图**与**映射 JSON 差异视图**之间切换：
-
-![Docs Assembler diff map json gif](./assets/DocsAssemblerDiff.gif)
-
-
-
 ### 步骤
 - **映射**是由**步骤**组成的文档段落。
 - 每个**步骤**指向一个包含该步骤文档文本的 **Markdown 文件**。
@@ -513,13 +499,12 @@ Docs Assembler 的编写模型尤其适用于分析性、低屈折变化的语�
 
 
 ### 已发布版本
-- 0.9.45
+- 0.9.53
     - 映射文件夹
     - Markdown IntelliSense、诊断、TextMate 和语义语法高亮（针对步骤和变量）
     - 发布列出的映射
     - 移动或复制映射文件夹时自动矫正相对 URL
     - 映射 JSON 编辑器
-    - 映射 JSON 差异编辑器
     - 映射资源管理器
     - 映射超链接
     - GitHub Pages 集成
