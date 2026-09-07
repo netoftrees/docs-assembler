@@ -20,6 +20,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Light theme
 
 
+## [0.9.55] - 2026-09-07
+
+### Added
+- **Open Link Map** - added a context menu item to the branch view for link steps to open the map they point to.
+
+### Fixed
+- **Step Type Swap Reversion** - fixed an intermittent issue where changing a step from Markdown to a link could be reverted under certain circumstances.
+
 
 ## [0.9.53] - 2026-08-23
 
