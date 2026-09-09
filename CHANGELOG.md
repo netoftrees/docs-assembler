@@ -20,6 +20,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Light theme
 
 
+## [0.9.59] - 2026-09-09
+
+### Fixed
+- **Orphaned Shared Step Files** - fixed a bug where orphaned shared step files were incorrectly removed.
+- **Shared Step Path Copy/Paste** - fixed a bug when copying and pasting paths into the location field in the step lens for a shared step file.
+
+### Changed
+- **New Markdown Step Default Content** - updated the default content for a new markdown step file.
+
+
 ## [0.9.55] - 2026-09-07
 
 ### Added
