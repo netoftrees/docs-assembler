@@ -378,13 +378,6 @@ Docs Assembler **不收集任何分析数据、使用数据或崩溃报告**。
     - 本地使用 Jekyll 的说明即将发布。
 
 
-
-### 扩展更新后请清除 VS Code 历史记录：
-- 打开命令面板：`Cmd+Shift+P`
-- 输入：`Clear Editor History`
-
-
-
 ### 映射
 - 主要构建块是**映射**。
 - 它是一个带 **.tsmap** 后缀的 **json** 文件。

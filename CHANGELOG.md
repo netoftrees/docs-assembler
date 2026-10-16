@@ -12,12 +12,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Help files
 - Move or copy a section of a branch
 - Make section of branch a new map
+- Cloudflare Pages integration
 - GitLab Pages integration
 - Port from database version
   - Projects
   - Search
   - Impact
 - Light theme
+
+
+## [0.10.1] - 2026-09-09
+
+### Added
+- **Inlined Maps** - Maps can now be inlined into a calling step's discussion. Unlike linked maps, an inline map has no outputs and does not define the calling step's branching. In contrast, linked maps have outputs to which the calling step must define what happens next.
 
 
 ## [0.9.59] - 2026-09-09
