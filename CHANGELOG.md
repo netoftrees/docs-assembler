@@ -21,7 +21,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Light theme
 
 
-## [0.10.1] - 2026-09-09
+
+## [0.10.2] - 2026-10-18
+
+### Fixed
+- **Missing Icons** - fixed an issue where some icons were not displaying correctly.
+
+### Changed
+- **Console Output** - removed extraneous console logging.
+
+
+## [0.10.1] - 2026-10-16
 
 ### Added
 - **Inlined Maps** - Maps can now be inlined into a calling step's discussion. Unlike linked maps, an inline map has no outputs and does not define the calling step's branching. In contrast, linked maps have outputs to which the calling step must define what happens next.
